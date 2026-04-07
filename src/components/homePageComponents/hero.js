@@ -35,6 +35,17 @@ const Hero = () => {
 
 主日崇拜时间：每周日下午 2:00
 教会地址：14640 6 St SW, Calgary, AB T2Y 0E1
+
+期待与您相见！
+
+Calgary Grace and Truth Chinese Church Welcomes You
+
+Calgary Grace and Truth Chinese Church warmly invites individuals and families to join our Sunday Worship Service every Sunday afternoon. We are a Christ-centered community committed to proclaiming the grace and truth of Jesus Christ, firmly rooted in the Word of God.
+Our congregation consists of believers from diverse backgrounds who share a desire to grow in faith, experience God’s presence, and build meaningful relationships. Through biblical teaching, heartfelt worship, prayer, and fellowship, we seek to equip believers to live out their faith and share God’s love with those around us.
+Whether you are a long-time Christian, new to the faith, or simply curious about Christianity, you are warmly welcome. Come as you are and experience a caring community where God’s grace is cherished, His truth is honored, and lives are being transformed.
+Sunday Worship Service Time: Every Sunday at 2:00 PM Location: 14640 6 St SW, Calgary, AB T2Y 0E1
+
+We look forward to worshiping with you.
       </Typography>
       <Button component={Link} to='/contact'>
         Contact Us

@@ -150,7 +150,7 @@ const AboutUs = () => {
           mb: 6,
         }}
       >
-        <Box component="img" src="/images/1.jpg" sx={{ width: '100%', borderRadius: 2 }} />
+        <Box component="img" src="/images/3FECCD33-146A-4E82-8224-7918B7ABC36F_1_105_c.jpeg.jpg" sx={{ width: '100%', borderRadius: 2 }} />
         <Box component="img" src="/images/2.jpg" sx={{ width: '100%', borderRadius: 2 }} />
         <Box component="img" src="/images/3.jpg" sx={{ width: '100%', borderRadius: 2 }} />
       </Box>

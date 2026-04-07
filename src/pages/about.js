@@ -102,7 +102,7 @@ const AboutUs = () => {
         <Box
           component="img"
            {/* src="/images/D1A2220B-4C33-41F1-A7B5-5B2E75C88E90_1_105_c.jpeg"*/}
-<Image src={ChurchPhoto} alt="Church" width={600} height={400} />
+          <Image src={ChurchPhoto} alt="Church" width={600} height={400} />
           sx={{
             width: '100%',
             height: { xs: 220, md: 420 },

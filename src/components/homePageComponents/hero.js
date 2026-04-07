@@ -63,6 +63,9 @@ We look forward to worshiping with you.`}
       <Button component={Link} to='/contact'>
         Contact Us
       </Button>
+              <Button component={Link} to='/about'>
+      About Us
+      </Button>
       <Box>TODO: Images</Box>
     </Box>
   );

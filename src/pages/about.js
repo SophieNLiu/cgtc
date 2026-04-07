@@ -11,7 +11,7 @@ const AboutUs = () => {
     <Layout>
       <Typography variant='h1'>关于我们（About Us)</Typography>
       <div>TODO: Photos</div>
-      <Segment title='我们的初心 (Our Mission)' sx={{ mb: { xs: 0, md: 12 } }}>
+      <Segment title='我们的初心 (Our Mission)' sx={{ mb: { xs: 0, md: 6 } }}>
 简单来说，我们是一群努力学习“爱”的人：学习爱那位创造生命的神，也学习如何真诚地爱身边的每一个人。在这里，我们不仅一起钻研圣经里的生活智慧，更像家人一样互相扶持、共同成长。我们最想做的，就是把这份从耶稣而来的平安与喜乐，分享给卡城每一位寻找生命意义的朋友。
       </Segment>
       <Segment title='我们的故事 (Our Story)'>

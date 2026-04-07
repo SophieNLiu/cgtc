@@ -23,10 +23,7 @@ const Events = () => {
           Events
         </Typography>
         <Typography sx={{ mb: { xs: 3, md: 6 } }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+在每周的固定敬拜之外，我们每年夏天会有户外聚餐， 徒步， BBQ。 复活节， 感恩节， 圣诞节都有相应的纪念活动。 
         </Typography>
         <Typography variant='h2' sx={{ mb: 2 }}>
           Upcoming Events

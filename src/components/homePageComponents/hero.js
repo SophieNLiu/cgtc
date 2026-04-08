@@ -17,11 +17,11 @@ const Hero = () => {
         mt: 3,
       }}
     >
-      <Typography variant='h1' textAlign='center'>
+      <Typography variant='h1' textAlign='left'>
         卡尔加里恩理华人基督教会欢迎您
       </Typography>
       <Typography
-        textAlign='center'
+        textAlign='left'
         sx={{
           maxWidth: {
             xs: '100%',

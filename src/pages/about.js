@@ -198,9 +198,15 @@ const Segment = props => {
         {title}
       </Typography>
 
-      <Typography sx={{ whiteSpace: 'pre-line', lineHeight: 1.8 }}>
-        {children}
-      </Typography>
+<Typography
+  sx={{
+    whiteSpace: 'pre-line',
+    lineHeight: 1.8,
+    textAlign: 'left',
+  }}
+>
+  {children}
+</Typography>
     </Box>
   );
 };

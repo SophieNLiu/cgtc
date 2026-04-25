@@ -87,7 +87,7 @@ const Hero = () => {
       }}
     >
       <Typography variant="h1" textAlign="left">
-        卡城恩理华人基督教会欢迎您
+        恩理教会欢迎您
       </Typography>
 
       <Typography

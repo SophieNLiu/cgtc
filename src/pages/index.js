@@ -15,8 +15,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <Hero />
+      {/*
       <AboutUs />
       <Sermons />
+      */}
     </Layout>
   );
 };

@@ -10,7 +10,7 @@ const Sermons = () => {
       sx={{ display: 'flex', flexDirection: 'column', width: '100%', gap: 2 }}
     >
       <Typography variant='h2'>Sermons</Typography>
-      <Button sx={{ alignSelf: 'center' }}>See More</Button>
+      <Button sx={{ alignSelf: 'center' }}>See More, where???</Button>
     </Box>
   );
 };

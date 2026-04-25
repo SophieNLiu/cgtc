@@ -12,7 +12,7 @@ import { useTheme } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import Logo from '../images/logo.svg';
+import Logo from '../images/cgtc_logo.svg';
 
 const Header = () => {
   const theme = useTheme();

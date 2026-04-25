@@ -1,3 +1,16 @@
+ import React from 'react';
+
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
+import Layout from '../components/layout';
+import Seo from '../components/seo';
+import ChurchPhoto from '../images/D1A2220B-4C33-41F1-A7B5-5B2E75C88E90_1_105_c.jpeg';
+import CarryCross from '../images/CarryCross.jpeg';
+import Children from '../images/Children.jpeg';
+import Preaching from '../images/Preaching.jpeg';
+
+
  {/* import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -13,16 +26,17 @@ const AboutUs = () => {
       <div>TODO: Photos</div>
 
 <Box sx={{ position: 'relative', mb: 4 }}>
-  <Box
-    component="img"
-    src="/images/D1A2220B-4C33-41F1-A7B5-5B2E75C88E90_1_105_c.jpeg"
-    sx={{
-      width: '100%',
-      height: { xs: 200, md: 400 },
-      objectFit: 'cover',
-      borderRadius: 3,
-    }}
-  />
+<Box
+  component="img"
+  src="/images/D1A2220B-4C33-41F1-A7B5-5B2E75C88E90_1_105_c.jpeg"
+  alt="Church"
+  sx={{
+    width: '100%',
+    height: { xs: 200, md: 400 },
+    objectFit: 'cover',
+    borderRadius: 3,
+  }}
+/>
 
   <Typography
     variant="h3"
@@ -84,14 +98,6 @@ const Segment = props => {
 
 export const Head = () => <Seo title='About Us' />; */}
 
-import React from 'react';
-
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-
-import Layout from '../components/layout';
-import Seo from '../components/seo';
-import ChurchPhoto from '../images/D1A2220B-4C33-41F1-A7B5-5B2E75C88E90_1_105_c.jpeg';
 
 const AboutUs = () => {
   return (
@@ -99,17 +105,17 @@ const AboutUs = () => {
 
       {/* Banner */}
       <Box sx={{ position: 'relative', mb: 4 }}>
-        <Box
-          component="img"
-           {/* src="/images/D1A2220B-4C33-41F1-A7B5-5B2E75C88E90_1_105_c.jpeg"*/}
-          <Image src={ChurchPhoto} alt="Church" width={600} height={400} />
-          sx={{
-            width: '100%',
-            height: { xs: 220, md: 420 },
-            objectFit: 'cover',
-            borderRadius: 3,
-          }}
-        />
+     <Box
+  component="img"
+  src={ChurchPhoto}
+  alt="Church"
+  sx={{
+    width: '100%',
+    height: { xs: 220, md: 420 },
+    objectFit: 'cover',
+    borderRadius: 3,
+  }}
+/>
 
         {/* 渐变遮罩 */}
         <Box
@@ -138,22 +144,51 @@ const AboutUs = () => {
 
       {/* 主标题 */}
       <Typography variant="h1" textAlign="center" sx={{ mb: 6 }}>
-        关于我们（About Us)
+        关于我们 About Us
       </Typography>
 
       {/* 照片区 */}
-      <Box
-        sx={{
-          display: 'grid',
-          gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
-          gap: 2,
-          mb: 6,
-        }}
-      >
-        <Box component="img" src="/images/3FECCD33-146A-4E82-8224-7918B7ABC36F_1_105_c.jpeg.jpg" sx={{ width: '100%', borderRadius: 2 }} />
-        <Box component="img" src="/images/2.jpg" sx={{ width: '100%', borderRadius: 2 }} />
-        <Box component="img" src="/images/3.jpg" sx={{ width: '100%', borderRadius: 2 }} />
-      </Box>
+<Box
+  sx={{
+    display: 'grid',
+    gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
+    gap: 2,
+    mb: 6,
+  }}
+>
+  <Box
+    component="img"
+    src={CarryCross}
+    sx={{
+      width: '100%',
+      height: 220,
+      objectFit: 'cover',
+      borderRadius: 2,
+    }}
+  />
+
+  <Box
+    component="img"
+    src={Preaching}
+    sx={{
+      width: '100%',
+      height: 220,
+      objectFit: 'cover',
+      borderRadius: 2,
+    }}
+  />
+
+  <Box
+    component="img"
+    src={Children}
+    sx={{
+      width: '100%',
+      height: 220,
+      objectFit: 'cover',
+      borderRadius: 2,
+    }}
+  />
+</Box>
 
       {/* Mission */}
       <Segment title="我们的初心 Our Mission" sx={{ mb: { xs: 4, md: 6 } }}>

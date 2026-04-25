@@ -28,19 +28,21 @@ const Sermons = () => {
       borderRadius: 2,
     }}
   >
-    <iframe
-      src="https://www.youtube.com/embed/cfl9YNB44U0"
-      title="Sermon Video"
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        border: 0,
-      }}
-      allowFullScreen
-    />
+<div style={{ position: 'relative', width: '100%', height: '500px' }}>
+  <iframe
+    src="https://www.svca.cc/messages/latest.html"
+    title="Sermon Video"
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      border: 0,
+    }}
+    allowFullScreen
+  />
+</div>
   </Box>
 </Box>
       </Box>

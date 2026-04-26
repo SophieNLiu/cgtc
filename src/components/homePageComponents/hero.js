@@ -87,7 +87,7 @@ const Hero = () => {
       }}
     >
       <Typography variant="h1" textAlign="left">
-        恩理教会欢迎您
+        卡城恩理教会欢迎您
       </Typography>
 
       <Typography
@@ -137,6 +137,9 @@ We look forward to worshiping with you.`}
 
       <Button component={Link} to="/about">
         About Us
+      </Button>
+            <Button component={Link} to="/events">
+        Events
       </Button>
 
       <Box>TODO: Images</Box>

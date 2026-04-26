@@ -86,8 +86,9 @@ const Hero = () => {
         mt: 3,
       }}
     >
-      <Typography variant="h1" textAlign="left">
-        卡城恩理教会欢迎您
+      <Typography variant="h1" textAlign="center">
+        卡城恩理教会
+        欢迎您
       </Typography>
 
       <Typography

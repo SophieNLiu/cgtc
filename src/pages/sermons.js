@@ -11,7 +11,7 @@ import Seo from '../components/seo';
 const Sermons = () => {
   return (
     <Layout>
-      <Typography variant="h1">Sermons</Typography>
+      <Typography variant="h1">讲道链接 Sermons</Typography>
 
       <Box sx={{ mt: 4, width: '100%' }}>
         <Typography variant="h5" gutterBottom>

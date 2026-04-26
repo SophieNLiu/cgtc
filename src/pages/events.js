@@ -20,13 +20,13 @@ const Events = () => {
         }}
       >
         <Typography variant='h1' sx={{ alignSelf: 'start', mb: 2 }}>
-          Events
+          教会活动 Events
         </Typography>
         <Typography sx={{ mb: { xs: 3, md: 6 } }}>
 在每周的固定敬拜之外，我们每年夏天会有户外聚餐， 徒步， BBQ。 复活节， 感恩节， 圣诞节都有相应的纪念活动。 
         </Typography>
         <Typography variant='h2' sx={{ mb: 2 }}>
-          Upcoming Events
+          近期安排 Upcoming Events
         </Typography>
         <Box
           sx={{

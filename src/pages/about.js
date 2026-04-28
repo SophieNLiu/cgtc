@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import ChurchPhoto from '../images/Angels.jpg';
+import ChurchPhoto from '../images/Angels.jpeg';
 import CarryCross from '../images/CarryCross.jpeg';
 import Children from '../images/Children.jpeg';
 import Preaching from '../images/Birthday.jpeg';

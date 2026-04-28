@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Birthday from '../../images/Birthday.jpeg';
+import Birthday from '../../images/Anniversary.jpeg';
 
 const Hero = () => {
   return (

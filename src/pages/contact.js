@@ -27,6 +27,11 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [feedback, setFeedback] = useState('');
 
+  const fullAddress = `${ADDRESS_LINE_1} ${ADDRESS_LINE_2} ${ADDRESS_LINE_3}`;
+  const googleMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    fullAddress
+  )}`;
+
   const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -35,8 +40,6 @@ const Contact = () => {
 
   const handleSubmitForm = async event => {
     event.preventDefault();
-
-    console.log('hello');
 
     try {
       await fetch('/', {
@@ -67,25 +70,20 @@ const Contact = () => {
       <Box
         sx={{
           width: '100%',
-          maxWidth: {
-            xs: '100%',
-            md: 800,
-          },
+          maxWidth: { xs: '100%', md: 800 },
         }}
       >
-        <Typography
-          variant='h1'
-          alignSelf='start'
-          sx={{ mb: { xs: 2, md: 5 } }}
-        >
+        <Typography variant="h1" sx={{ mb: { xs: 2, md: 5 } }}>
           Contact
         </Typography>
+
         <Box
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
           }}
         >
+          {/* CONTACT INFO */}
           <Box
             sx={{
               display: 'grid',
@@ -94,24 +92,48 @@ const Contact = () => {
               rowGap: 2,
               flexGrow: 1,
               mt: 1.5,
-              mb: {
-                xs: 3,
-                md: 0,
-              },
+              mb: { xs: 3, md: 0 },
             }}
           >
+            {/* ADDRESS → Google Maps */}
             <IconSegment Icon={FmdGoodOutlinedIcon}>
-              <Typography>{ADDRESS_LINE_1}</Typography>
-              <Typography>{ADDRESS_LINE_2}</Typography>
-              <Typography>{ADDRESS_LINE_3}</Typography>
+              <Box
+                component="a"
+                href={googleMapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={linkStyle}
+              >
+                <Typography>{ADDRESS_LINE_1}</Typography>
+                <Typography>{ADDRESS_LINE_2}</Typography>
+                <Typography>{ADDRESS_LINE_3}</Typography>
+              </Box>
             </IconSegment>
+
+            {/* PHONE → CALL */}
             <IconSegment Icon={LocalPhoneOutlinedIcon}>
-              <Typography>{PHONE_NUMBER}</Typography>
+              <Box
+                component="a"
+                href={`tel:${PHONE_NUMBER}`}
+                sx={linkStyle}
+              >
+                <Typography>{PHONE_NUMBER}</Typography>
+              </Box>
             </IconSegment>
+
+            {/* EMAIL → MAIL POPUP */}
             <IconSegment Icon={EmailOutlinedIcon}>
-              <Typography>{EMAIL_ADDRESS}</Typography>
+              <Box
+                component="a"
+                href={`mailto:${EMAIL_ADDRESS}`}
+                sx={linkStyle}
+              >
+                <Typography>{EMAIL_ADDRESS}</Typography>
+              </Box>
             </IconSegment>
           </Box>
+
+          {/* FORM */}
           <Box
             sx={{
               display: 'flex',
@@ -119,57 +141,56 @@ const Contact = () => {
               flexGrow: 1,
               gap: 0.75,
             }}
-            component='form'
-            name='contact'
-            method='POST'
-            data-netlify='true'
+            component="form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
             onSubmit={handleSubmitForm}
           >
-            <input type='hidden' name='form-name' value='contact' />
+            <input type="hidden" name="form-name" value="contact" />
+
             <TextField
-              label='Name'
+              label="Name"
               value={name}
-              onChange={event => {
-                setName(event.target.value);
-                if (feedback) {
-                  setFeedback('');
-                }
+              onChange={e => {
+                setName(e.target.value);
+                if (feedback) setFeedback('');
               }}
             />
+
             <TextField
-              label='Email'
-              type='email'
+              label="Email"
+              type="email"
               required
               value={email}
-              onChange={event => {
-                setEmail(event.target.value);
-                if (feedback) {
-                  setFeedback('');
-                }
+              onChange={e => {
+                setEmail(e.target.value);
+                if (feedback) setFeedback('');
               }}
             />
+
             <TextField
-              label='Message'
+              label="Message"
               multiline
               minRows={5}
               value={message}
-              onChange={event => {
-                setMessage(event.target.value);
-                if (feedback) {
-                  setFeedback('');
-                }
+              onChange={e => {
+                setMessage(e.target.value);
+                if (feedback) setFeedback('');
               }}
             />
+
             <Button
               sx={{
                 borderRadius: 0,
                 alignSelf: 'end',
                 width: { xs: '100%', md: '8rem' },
               }}
-              type='submit'
+              type="submit"
             >
               Send
             </Button>
+
             <TransitionBox isVisible={feedback}>
               <Typography>{feedback}</Typography>
             </TransitionBox>
@@ -182,6 +203,7 @@ const Contact = () => {
 
 export default Contact;
 
+/* ICON BLOCK */
 const IconSegment = props => {
   const { Icon, children } = props;
 
@@ -193,4 +215,15 @@ const IconSegment = props => {
   );
 };
 
-export const Head = () => <Seo title='Contact Us' />;
+/* LINK STYLE */
+const linkStyle = {
+  color: 'inherit',
+  textDecoration: 'none',
+  display: 'inline-block',
+  '&:hover': {
+    opacity: 0.7,
+    cursor: 'pointer',
+  },
+};
+
+export const Head = () => <Seo title="Contact Us" />;

@@ -100,9 +100,11 @@ const Header = () => {
             <Button variant='text' component={Link} to='/events'>
               Events
             </Button>
+            {/*}
             <Button variant='text' component={Link} to='/sermons'>
               Sermons
             </Button>
+            */}
             <Button variant='text' component={Link} to='/contact'>
               Contact Us
             </Button>
@@ -145,9 +147,11 @@ const Header = () => {
         <Button variant='text' color='secondary' component={Link} to='/events'>
           Events
         </Button>
+        {/*}
         <Button variant='text' color='secondary' component={Link} to='/sermons'>
           Sermons
         </Button>
+        */}
         <Button variant='text' color='secondary' component={Link} to='/contact'>
           Contact Us
         </Button>

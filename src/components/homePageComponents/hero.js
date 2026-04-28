@@ -30,7 +30,7 @@ const Hero = () => {
     >
       {/* TITLE */}
       <Typography variant="h1" textAlign="center" width="100%">
-        卡城恩理教会
+        卡城恩理基督教会
         <br />
         欢迎您
       </Typography>

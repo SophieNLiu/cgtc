@@ -8,7 +8,7 @@ import Seo from '../components/seo';
 import ChurchPhoto from '../images/Angels.jpeg';
 import CarryCross from '../images/CarryCross.jpeg';
 import Children from '../images/Children.jpeg';
-import Preaching from '../images/Birthday.jpeg';
+import Preaching from '../images/Preaching.jpeg';
 import Birthday from '../images/Birthday.jpeg';
 
 
@@ -71,6 +71,18 @@ const AboutUs = () => {
     mb: 6,
   }}
 >
+
+    <Box
+    component="img"
+    src={Preaching}
+    sx={{
+      width: '100%',
+      height: 220,
+      objectFit: 'cover',
+      borderRadius: 2,
+    }}
+  />
+
   <Box
     component="img"
     src={CarryCross}
@@ -84,7 +96,7 @@ const AboutUs = () => {
 
   <Box
     component="img"
-    src={Preaching}
+    src={Birthday}
     sx={{
       width: '100%',
       height: 220,

@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Birthday from '../../images/Anniversary.jpeg';
+import Anniversary from '../../images/Anniversary.jpeg';
 
 const Hero = () => {
   return (
@@ -87,7 +87,7 @@ We look forward to worshiping with you.`}
         {/* Image */}
         <Box
           component="img"
-          src={Birthday}
+          src={Anniversary}
           alt="Church"
           sx={{
             width: '100%',
@@ -119,7 +119,7 @@ We look forward to worshiping with you.`}
             zIndex: 2, // ⭐ ABOVE shadow
           }}
         >
-          Birthday Event
+          10 Years Anniversary
         </Typography>
       </Box>
     </Box>

@@ -1,38 +1,63 @@
- import React from 'react';
+import React, { useRef, useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import Dialog from '@mui/material/Dialog';
+
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+
 import ChurchPhoto from '../images/Angels.jpeg';
 import CarryCross from '../images/CarryCross.jpeg';
 import Children from '../images/Children.jpeg';
 import Preaching from '../images/Preaching.jpeg';
 import Birthday from '../images/Birthday.jpeg';
 
-
-
-
 const AboutUs = () => {
+  const scrollRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const [currentImg, setCurrentImg] = useState('');
+
+  const images = [Preaching, CarryCross, Birthday, Children];
+
+  const scroll = (dir) => {
+    if (!scrollRef.current) return;
+
+    const container = scrollRef.current;
+    const scrollAmount = container.clientWidth; // 👈 scroll one full screen
+
+    container.scrollBy({
+      left: dir === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
+  };
+
+  const handleOpen = (img) => {
+    setCurrentImg(img);
+    setOpen(true);
+  };
+
   return (
     <Layout>
 
       {/* Banner */}
       <Box sx={{ position: 'relative', mb: 4 }}>
-     <Box
-  component="img"
-  src={ChurchPhoto}
-  alt="Church"
-  sx={{
-    width: '100%',
-    height: { xs: 220, md: 420 },
-    objectFit: 'cover',
-    borderRadius: 3,
-  }}
-/>
+        <Box
+          component="img"
+          src={ChurchPhoto}
+          alt="Church"
+          sx={{
+            width: '100%',
+            height: { xs: 220, md: 420 },
+            objectFit: 'cover',
+            borderRadius: 3,
+          }}
+        />
 
-        {/* 渐变遮罩 */}
         <Box
           sx={{
             position: 'absolute',
@@ -42,7 +67,6 @@ const AboutUs = () => {
           }}
         />
 
-        {/* Banner 标题 */}
         <Typography
           variant="h3"
           sx={{
@@ -52,70 +76,104 @@ const AboutUs = () => {
             color: 'white',
             fontWeight: 'bold',
           }}
-        >
-        
-        </Typography>
+        />
       </Box>
 
-      {/* 主标题 */}
+      {/* Title */}
       <Typography variant="h1" textAlign="center" sx={{ mb: 6 }}>
         关于我们 About Us
       </Typography>
 
-      {/* 照片区 */}
-<Box
-  sx={{
-    display: 'grid',
-    gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
-    gap: 2,
-    mb: 6,
-  }}
->
+      {/* ✅ Carousel (3 per row) */}
+      <Box sx={{ position: 'relative', mb: 6 }}>
 
-    <Box
-    component="img"
-    src={Preaching}
-    sx={{
-      width: '100%',
-      height: 220,
-      objectFit: 'cover',
-      borderRadius: 2,
-    }}
-  />
+        {/* LEFT */}
+        <IconButton
+          onClick={() => scroll('left')}
+          sx={{
+            position: 'absolute',
+            left: 0,
+            top: '40%',
+            zIndex: 2,
+            backgroundColor: 'white',
+          }}
+        >
+          <ArrowBackIosNewIcon />
+        </IconButton>
 
-  <Box
-    component="img"
-    src={CarryCross}
-    sx={{
-      width: '100%',
-      height: 220,
-      objectFit: 'cover',
-      borderRadius: 2,
-    }}
-  />
+        {/* ROW */}
+        <Box
+          ref={scrollRef}
+          sx={{
+            display: 'flex',
+            overflowX: 'auto',
+            gap: 2,
+            px: 5,
+            scrollSnapType: 'x mandatory',
 
-  <Box
-    component="img"
-    src={Birthday}
-    sx={{
-      width: '100%',
-      height: 220,
-      objectFit: 'cover',
-      borderRadius: 2,
-    }}
-  />
+            '&::-webkit-scrollbar': {
+              display: 'none',
+            },
+          }}
+        >
+          {images.map((img, i) => (
+            <Box
+              key={i}
+              component="img"
+              src={img}
+              loading="lazy"
+              onClick={() => handleOpen(img)}
+              sx={{
+                flex: '0 0 auto',
 
-  <Box
-    component="img"
-    src={Children}
-    sx={{
-      width: '100%',
-      height: 220,
-      objectFit: 'cover',
-      borderRadius: 2,
-    }}
-  />
-</Box>
+                // 👇 KEY PART
+                width: {
+                  xs: '80%',   // mobile: 1 image
+                  sm: '50%',   // tablet: 2 images
+                  md: '33.33%' // desktop: 3 images
+                },
+
+                height: 260,
+                objectFit: 'cover',
+                borderRadius: 2,
+                cursor: 'pointer',
+                scrollSnapAlign: 'start',
+
+                '&:hover': {
+                  transform: 'scale(1.03)',
+                },
+              }}
+            />
+          ))}
+        </Box>
+
+        {/* RIGHT */}
+        <IconButton
+          onClick={() => scroll('right')}
+          sx={{
+            position: 'absolute',
+            right: 0,
+            top: '40%',
+            zIndex: 2,
+            backgroundColor: 'white',
+          }}
+        >
+          <ArrowForwardIosIcon />
+        </IconButton>
+
+        {/* LIGHTBOX */}
+        <Dialog open={open} onClose={() => setOpen(false)} maxWidth="lg">
+          <Box
+            component="img"
+            src={currentImg}
+            sx={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </Dialog>
+
+      </Box>
 
       {/* Mission */}
       <Segment title="我们的初心 Our Mission" sx={{ mb: { xs: 4, md: 6 } }}>
@@ -139,38 +197,31 @@ const AboutUs = () => {
 
 export default AboutUs;
 
-const Segment = props => {
-  const { title, children, sx = {} } = props;
+const Segment = ({ title, children, sx = {} }) => (
+  <Box
+    sx={{
+      display: { xs: 'flex', md: 'grid' },
+      flexDirection: 'column',
+      gridTemplateColumns: '1fr min(50%, 600px) 1fr',
+      gap: 2,
+      mb: 4,
+      ...sx,
+    }}
+  >
+    <Typography variant="h2">
+      {title}
+    </Typography>
 
-  return (
-    <Box
+    <Typography
       sx={{
-        display: { xs: 'flex', md: 'grid' },
-        flexDirection: 'column',
-        gridTemplateColumns: '1fr min(50%, 600px) 1fr',
-        gap: 2,
-        mb: 4,
-        ...sx,
+        whiteSpace: 'pre-line',
+        lineHeight: 1.8,
+        textAlign: 'left',
       }}
     >
-      <Typography
-        variant="h2"
-        sx={{ width: { xs: '100%', md: 'min-content' } }}
-      >
-        {title}
-      </Typography>
-
-<Typography
-  sx={{
-    whiteSpace: 'pre-line',
-    lineHeight: 1.8,
-    textAlign: 'left',
-  }}
->
-  {children}
-</Typography>
-    </Box>
-  );
-};
+      {children}
+    </Typography>
+  </Box>
+);
 
 export const Head = () => <Seo title="About Us" />;

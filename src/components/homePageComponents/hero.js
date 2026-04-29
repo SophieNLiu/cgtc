@@ -9,7 +9,8 @@ import IconButton from '@mui/material/IconButton';
 
 import CloseIcon from '@mui/icons-material/Close';
 
-import Anniversary from '../../images/Anniversary.jpeg';
+//import Anniversary from '../../images/Anniversary.jpeg';
+import Angels from '../../images/Angels.jpeg';
 
 const Hero = () => {
   const [open, setOpen] = useState(false);
@@ -55,7 +56,16 @@ const Hero = () => {
 
 Calgary Grace and Truth Chinese Church Welcomes You
 
-We warmly invite you to join our Sunday Worship Service every Sunday at 2:00 PM.`}
+Calgary Grace and Truth Chinese Church warmly invites individuals and families to join our Sunday Worship Service every Sunday afternoon. We are a Christ-centered community committed to proclaiming the grace and truth of Jesus Christ, firmly rooted in the Word of God.
+
+Our congregation consists of believers from diverse backgrounds who share a desire to grow in faith, experience God’s presence, and build meaningful relationships. Through biblical teaching, heartfelt worship, prayer, and fellowship, we seek to equip believers to live out their faith and share God’s love with those around us.
+
+Whether you are a long-time Christian, new to the faith, or simply curious about Christianity, you are warmly welcome. Come as you are and experience a caring community where God’s grace is cherished, His truth is honored, and lives are being transformed.
+
+Sunday Worship ServiceTime: Every Sunday at 2:00 PMLocation: 14640 6 St SW, Calgary, AB T2Y 0E1
+
+We look forward to worshiping with you.
+`}
       </Typography>
 
       {/* BUTTONS */}
@@ -83,8 +93,8 @@ We warmly invite you to join our Sunday Worship Service every Sunday at 2:00 PM.
         {/* IMAGE */}
         <Box
           component="img"
-          src={Anniversary}
-          alt="Church Anniversary"
+          src={Angels}
+          alt="Angels"
           sx={{
             width: '100%',
 
@@ -120,7 +130,7 @@ We warmly invite you to join our Sunday Worship Service every Sunday at 2:00 PM.
             fontSize: { xs: '1.5rem', md: '2.5rem' },
           }}
         >
-          10 Years Anniversary
+        
         </Typography>
       </Box>
 
@@ -146,8 +156,8 @@ We warmly invite you to join our Sunday Worship Service every Sunday at 2:00 PM.
 
           <Box
             component="img"
-            src={Anniversary}
-            alt="Full Anniversary View"
+            src={Angels}
+            alt="Full Angels View"
             sx={{
               width: '100%',
               height: 'auto',

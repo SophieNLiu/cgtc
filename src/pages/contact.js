@@ -74,7 +74,7 @@ const Contact = () => {
         }}
       >
         <Typography variant="h1" sx={{ mb: { xs: 2, md: 5 } }}>
-          Contact
+          联系我们 Contact
         </Typography>
 
         <Box

@@ -62,9 +62,11 @@ Our congregation consists of believers from diverse backgrounds who share a desi
 
 Whether you are a long-time Christian, new to the faith, or simply curious about Christianity, you are warmly welcome. Come as you are and experience a caring community where God’s grace is cherished, His truth is honored, and lives are being transformed.
 
-Sunday Worship ServiceTime: Every Sunday at 2:00 PMLocation: 14640 6 St SW, Calgary, AB T2Y 0E1
+Sunday Worship ServiceTime: Every Sunday at 2:00 PM
 
-We look forward to worshiping with you.
+Location: 14640 6 St SW, Calgary, AB T2Y 0E1
+
+We look forward to worshiping with you！
 `}
       </Typography>
 

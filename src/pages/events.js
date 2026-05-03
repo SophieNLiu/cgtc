@@ -7,6 +7,20 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 
 import events from '../resources/events.json';
+import { Link } from 'gatsby';
+
+
+
+  const pastEvents = events
+  .filter(e => e.type === 'past')
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+const regularEvents = events
+  .filter(e => e.type === 'regular');
+
+  const featuredEvents = events
+  .filter(e => e.type === 'featured');
+
 
 const Events = () => {
   return (
@@ -27,7 +41,7 @@ const Events = () => {
 请看近期安排， 不要错过即将到来的活动哦！😊
         </Typography>
         <Typography variant='h2' sx={{ mb: 2 }}>
-          近期安排 Upcoming Events
+          日常安排 Regular Events
         </Typography>
         <Box
           sx={{
@@ -40,7 +54,7 @@ const Events = () => {
             },
           }}
         >
-          {events.map((event, index) => (
+        {regularEvents.map((event, index) => (
             <React.Fragment key={index}>
               <Box sx={{ mt: { xs: 1, md: 0 } }}>
                 <Typography variant='h3'>{event.title}</Typography>
@@ -50,6 +64,54 @@ const Events = () => {
             </React.Fragment>
           ))}
         </Box>
+
+        <Typography variant='h2' sx={{ mt: 3, mb:2 }}>  
+          特别活动 Featured Events
+        </Typography>
+        <Box
+          sx={{
+            display: { xs: 'flex', md: 'grid' },
+            flexDirection: 'column',
+            gridTemplateColumns: '1fr 3fr',
+            gap: {
+              xs: 1,
+              md: 3,
+            },
+          }}
+        >
+        {featuredEvents.map((event, index) => (
+            <React.Fragment key={index}>
+              <Box sx={{ mt: { xs: 1, md: 0 } }}>
+                <Typography variant='h3'>{event.title}</Typography>
+                <Typography>{event.date}</Typography>
+              </Box>
+              <Typography>{event.description}</Typography>
+            </React.Fragment>
+          ))}
+        </Box>
+
+
+<Typography variant="h2" sx={{ mt: 3, mb:2 }}>
+  活动纪实 Past Events
+</Typography>
+
+{pastEvents.map(event => (
+  <Box key={event.slug} mb={3}>
+    <Link to={`/events/${event.slug}`}>
+      <Typography variant="h6">
+        {event.title}
+      </Typography>
+    </Link>
+
+{event.cover && (
+  <img src={`/images/${event.cover}`} loading="lazy" width="50%" />
+)}
+
+    <Typography variant="body2">
+      {event.date} | {event.location}
+    </Typography>
+  </Box>
+))}
       </Box>
     </Layout>
   );
@@ -58,3 +120,5 @@ const Events = () => {
 export default Events;
 
 export const Head = () => <Seo title='Events' />;
+
+

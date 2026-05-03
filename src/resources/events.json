@@ -1,22 +1,68 @@
 [
-    {
-    "title": "❤️母亲节包饺子",
-    "date": "5月10日 下午3:30-7:00",
-    "description": "欢迎您带上好心情和对妈妈的爱 来一起包饺子聚餐 庆祝母亲节🌹"
-  },
+{
+  "slug": "annual-meeting-2026",
+  "title": "2026 会友大会",
+  "date": "2026-05-02 3:15-4:00 pm",
+  "location": "Calgary",
+  "description": "一年一度的会友大会是我们回顾过去展望未来的时候，请弟兄姐妹们准时参加！",
+  "type": "featured"
+},
+  {
+  "slug": "mothers-day-2026",
+  "title": "❤️母亲节包饺子",
+  "date": "2026-05-10 3:30-7:00 pm",
+  "location": "Calgary",
+  "description": "欢迎您带上好心情和对妈妈的爱 来一起包饺子聚餐",
+  "type": "featured"
+},
+
   {
     "title": "主日崇拜",
     "date": "礼拜天 下午2:00-3:15",
-    "description": "主日下午是我们聚集敬拜上帝的时间（同时有儿童主日学），之后3:30-4:30有成人主日学"
+    "description": "主日下午是我们聚集敬拜上帝的时间（同时有儿童主日学），之后3:30-4:30有成人主日学",
+     "type": "regular"
+  },
+
+    {
+    "title": "诗班练诗",
+    "date": "礼拜天 下午1:00-1:50",
+    "description": "诗班会练声， 学习新的圣诗， 在教会献诗， 参与其它教会或机构的联合献诗活动",
+     "type": "regular"
   },
   {
     "title": "四海读经",
     "date": "礼拜三 晚7:00-9:00",
-    "description": "欢迎参加网上四海读经 Zoom：8309231547 pw: 12345"
+    "description": "欢迎参加网上四海读经 Zoom：8309231547 pw: 12345",
+     "type": "regular"
   },
+    {
+    "title": "祷告会",
+    "date": "礼拜四 晚7:00-8:00",
+    "description": "为我们所拥有的一切献上感恩，为教会的弟兄姐妹代祷，为我们的亲朋信主， 我们一起祷告。欢迎您的加入。Zoom：8309231547 pw: 12345",
+     "type": "regular"
+  },
+
   {
-    "title": "恩理诗班",
-    "date": "礼拜天 下午1:00-1:50",
-    "description": "诗班会练声， 学习新的圣诗， 在教会献诗， 参与其它教会或机构的联合献诗活动"
+    "slug": "christmas-2025",
+    "title": "庆祝圣诞 2025",
+    "date": "2025-12-23",
+    "location": "Calgary",
+    "description": "瓦器，恩理，和青草地教会欢聚一堂，庆祝耶稣基督的诞生",
+    "images": ["christmas1.jpeg", "christmas2.jpeg", "christmas3.jpeg", "christmas4.jpeg", "christmas5.jpeg", 
+    "christmas6.jpeg", "christmas7.jpeg", "christmas8.jpeg", "christmas9.jpeg", "christmas10.jpeg", "christmas11.jpeg", "christmas12.jpeg"
+  , "christmas13.jpeg", "christmas14.jpeg", "christmas15.jpeg"],
+    "type": "past",
+    "cover": "christmas1.jpeg"
+  },
+    {
+    "slug": "Easter-2026",
+    "title": "复活节 2026",
+    "date": "2026-04-12",
+    "location": "Calgary",
+    "description": "和路德教会的弟兄姐妹们同抗十字架，把名字钉在十字架上，与耶稣同死同复活",
+    "images": ["easter1.jpeg", "easter2.jpeg", "easter3.jpeg", "easter4.jpeg"],
+    "type": "past",
+    "cover": "easter1.jpeg"
   }
 ]
+

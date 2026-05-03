@@ -6,30 +6,40 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link } from 'gatsby';
 
+import events from '../resources/events.json';
+
 // 🔥 CHANGE THIS FOR EACH NEW EVENT
-const EVENT_KEY = 'event_banner_2026_anniversary';
+//const EVENT_KEY = 'event_banner_2026_anniversary';
+
+const featuredEvent = events.find(e => e.type === 'featured');
+
+const EVENT_KEY = featuredEvent?.slug || 'event_banner';
 
 const EventBanner = () => {
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    const dismissed = localStorage.getItem(EVENT_KEY);
-    setVisible(!dismissed);
-  }, []);
+useEffect(() => {
+  if (!featuredEvent) return;
 
-  const handleClose = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    localStorage.setItem(EVENT_KEY, 'true');
-    setVisible(false);
-  };
+  const dismissed = localStorage.getItem(EVENT_KEY);
+  setVisible(!dismissed);
+}, [featuredEvent]);
 
-  if (!visible) return null;
+const handleClose = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  localStorage.setItem(EVENT_KEY, 'true');
+  setVisible(false);
+};
+
+
+  if (!visible || !featuredEvent) return null;
+
 
   return (
     <Box
       component={Link}
-      to="/events"
+      to={featuredEvent?.slug ? `/events/${featuredEvent.slug}` : '/events'}
       sx={(theme) => ({
         position: 'fixed',
         top: 0,
@@ -56,15 +66,20 @@ const EventBanner = () => {
       })}
     >
       {/* TEXT */}
-      <Typography
-        sx={{
-          fontSize: { xs: '0.85rem', md: '1rem' },
-          fontWeight: 500,
-          textAlign: 'center',
-        }}
-      >
-        📢 5月10日 母亲节包饺子聚餐 — 点击看详细内容
-      </Typography>
+<Typography
+  sx={{
+    fontSize: { xs: '0.85rem', md: '1rem' },
+    fontWeight: 500,
+    textAlign: 'center',
+  }}
+>
+  {featuredEvent
+    ? `📢 ${featuredEvent.date} ${featuredEvent.title}`
+    : ''}
+
+
+
+</Typography>
 
       {/* CLOSE BUTTON */}
       <IconButton
@@ -81,4 +96,6 @@ const EventBanner = () => {
   );
 };
 
+
 export default EventBanner;
+

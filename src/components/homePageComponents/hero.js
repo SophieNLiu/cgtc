@@ -36,12 +36,14 @@ const Hero = () => {
         欢迎您
       </Typography>
 
-      {/* DESCRIPTION */}
+{/* DESCRIPTION */}
 <Typography
   textAlign="left"
   sx={{
     maxWidth: { xs: '100%', md: 800 },
     whiteSpace: 'pre-line',
+    mx: 'auto',        // ✅ centers the whole block
+    px: { xs: 2, md: 0 } // ✅ adds small side padding on mobile
   }}
 >
 {`卡尔加里恩理华人基督教会诚挚邀请各界朋友参加每周日下午举行的主日崇拜。

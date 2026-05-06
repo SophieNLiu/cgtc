@@ -16,19 +16,27 @@ const Hero = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Box
-      sx={{
-        maxWidth: 1200,
-        margin: '0 auto',
-        px: 2,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        gap: 2,
-        width: '100%',
-        mt: 3,
-      }}
-    >
+<Box
+
+  role='main'
+
+  sx={{
+
+    display: 'flex',
+
+    flexDirection: 'column',
+
+    alignItems: 'center',
+
+    gap: 2,
+
+    px: { xs: 0, md: 4 },   // 🔥 remove mobile padding here
+
+    pb: { xs: 1, md: 4 },
+
+  }}
+
+>
       {/* TITLE */}
       <Typography variant="h1" textAlign="center" width="100%">
         卡城恩理基督教会
@@ -100,6 +108,8 @@ We look forward to worshiping with you！
 
       {/* ================= HERO IMAGE ================= */}
       <Box
+
+      
         sx={{
           position: 'relative',
           width: '100%',

@@ -11,7 +11,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
-import ChurchPhoto from '../images/Birthday.jpeg';
+import ChurchPhoto from '../images/md_group.jpeg';
 import CarryCross from '../images/CarryCross.jpeg';
 import Children from '../images/Children.jpeg';
 import Preaching from '../images/Preaching.jpeg';
@@ -26,7 +26,7 @@ const AboutUs = () => {
   const [open, setOpen] = useState(false);
   const [currentImg, setCurrentImg] = useState('');
 
-  const images = [Preaching, CarryCross, Children, Baptise, Dinner, oldsCollege, Anniversary];
+  const images = [Birthday,Preaching, CarryCross, Children, Baptise, Dinner, oldsCollege, Anniversary];
 
   const scroll = (dir) => {
     if (!scrollRef.current) return;

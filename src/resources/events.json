@@ -1,13 +1,26 @@
 [
 
-  
+    {
+    "slug": "fathers-day-2026",
+    "title": "父亲节户外敬拜🙏",
+    "date": "2026-06-21",
+    "location": "Calgary Lake Chaparral",
+    "description": "在有湖，沙滩，瀑布，小溪，假山的地方敬拜，庆祝父亲节，聚餐，运动！好期待😊",
+    "type": "featured"
+  },
   {
     "slug": "annual-meeting-2026",
     "title": "2026 会友大会",
     "date": "2026-05-02 3:15-4:00 pm",
     "location": "Calgary",
-    "description": "一年一度的会友大会是我们回顾过去展望未来的时候，请弟兄姐妹们准时参加！",
-    "type": "featured"
+    "description": "一年一度的会友大会是我们回顾过去展望未来的时候，2025年有两位姐妹受洗， 三位弟兄姐妹转会加入恩理大家庭👏",
+        "images": [
+      "/images/annualMeeting1.jpeg",
+      "/images/annualMeeting2.jpeg",
+      "/images/annualMeeting3.jpeg",
+      "/images/annualMeeting4.jpeg"
+    ],
+    "type": "past"
   },
 
 

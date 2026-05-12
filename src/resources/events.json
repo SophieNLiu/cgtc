@@ -1,16 +1,5 @@
 [
-    {
-    "slug": "mothers-day-2026",
-    "title": "❤️母亲节包饺子",
-    "date": "2026-05-10 3:30-7:00 pm",
-    "location": "Calgary",
-    "description": "欢迎您带上好心情和对妈妈的爱 来一起包饺子聚餐",
-        "images": [
-      "/images/mothers1.jpeg",
-      "/images/mothers2.jpeg"
-    ],
-    "type": "featured"
-  },
+
   
   {
     "slug": "annual-meeting-2026",
@@ -87,5 +76,34 @@
     ],
     "type": "past",
     "cover": "/images/easter1.jpeg"
+  },
+
+      {
+    "slug": "mothers-day-2026",
+    "title": "❤️母亲节包饺子",
+    "date": "2026-05-10 3:30-7:00 pm",
+    "location": "Calgary",
+    "description": "康乃馨，欢声笑语，美味饺子，特色美食，专业摄影，亲爱的家人们 -- 快乐的母亲节🌹 五月是六位弟兄姐妹的生日🍰 感谢神丰丰富富的赐予🙏",
+        "images": [
+      "/images/md_mothersGroup.jpeg",
+      "/images/md_bdGroup.jpeg",
+      "/images/md_mingzhu.jpeg",
+      "/images/md_kichenGroup.jpeg",
+      "/images/md_kichenKids.jpeg",
+      "/images/md_KidsDumpling.jpeg",
+      "/images/md_makingDumpling.jpeg",
+      "/images/md_xiaolingXiuqingBaojiaozi.jpeg",
+      "/images/md_james.jpeg",
+      "/images/md_xiwan.jpeg",
+      "/images/md_grandmas.jpeg",
+      "/images/md_dancing.jpeg",
+      "/images/md_5mothers.jpeg",
+      "/images/md_TimGroup.jpeg",
+      "/images/md_group.jpeg",
+      "/images/mothers1.jpeg",
+      "/images/mothers2.jpeg"
+    ],
+    "type": "past",
+    "cover": "/images/md_mothersGroup.jpeg"
   }
 ]

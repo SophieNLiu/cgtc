@@ -20,16 +20,20 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
 
+  // MATCH FOOTER COLOR EXACTLY
+  const headerColor = theme.palette.text.primary;
+
   if (isMobile) {
     return (
       <Box
         sx={{
           position: 'sticky',
           top: 0,
-          backgroundColor: 'background.default',
-          zIndex: 1,
+          backgroundColor: headerColor,
+          zIndex: 1200,
           p: 1,
           marginBottom: 2,
+          boxShadow: '0 2px 8px rgba(0,0,0,0.18)',
         }}
       >
         <Box
@@ -42,16 +46,18 @@ const Header = () => {
           <Link to='/' style={{ gridColumnStart: 2 }}>
             <Logo style={{ height: '5rem', width: 'auto' }} title='Home' />
           </Link>
+
           <IconButton
-            color='primary'
             sx={{
               justifySelf: 'flex-end',
+              color: theme.palette.background.default,
             }}
             onClick={() => setOpen(true)}
           >
             <MenuIcon fontSize='large' />
           </IconButton>
         </Box>
+
         <Drawer
           anchor='right'
           open={open}
@@ -61,6 +67,8 @@ const Header = () => {
               sx: {
                 width: '100vw',
                 height: '100vh',
+                backgroundColor: headerColor,
+                color: theme.palette.background.default,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -74,15 +82,40 @@ const Header = () => {
           }}
         >
           <IconButton
-            color='primary'
             onClick={() => setOpen(false)}
-            sx={{ position: 'absolute', right: 0, top: 0, mt: 2, mr: 2 }}
+            sx={{
+              position: 'absolute',
+              right: 0,
+              top: 0,
+              mt: 2,
+              mr: 2,
+              color: theme.palette.background.default,
+            }}
           >
             <CloseIcon fontSize='large' />
           </IconButton>
-          <Button component={Link} to='/contact'>
+
+          {/* Main CTA */}
+          <Button
+            component={Link}
+            to='/contact'
+            onClick={() => setOpen(false)}
+            sx={{
+              color: theme.palette.text.primary,
+              backgroundColor: theme.palette.background.default,
+              px: 3,
+              py: 1,
+              borderRadius: 999,
+              fontWeight: 700,
+              '&:hover': {
+                backgroundColor: '#f5f5f5',
+              },
+            }}
+          >
             Contact Us
           </Button>
+
+          {/* Navigation */}
           <Box
             sx={{
               display: 'flex',
@@ -91,23 +124,30 @@ const Header = () => {
               gap: 1,
             }}
           >
-            <Button variant='text' component={Link} to='/'>
-              Home
-            </Button>
-            <Button variant='text' component={Link} to='/about'>
-              About Us
-            </Button>
-            <Button variant='text' component={Link} to='/events'>
-              Events
-            </Button>
-            {/*}
-            <Button variant='text' component={Link} to='/sermons'>
-              Sermons
-            </Button>
-            */}
-            <Button variant='text' component={Link} to='/contact'>
-              Contact Us
-            </Button>
+            {[
+              { label: 'Home', path: '/' },
+              { label: 'About Us', path: '/about' },
+              { label: 'Events', path: '/events' },
+              { label: 'Contact Us', path: '/contact' },
+            ].map(item => (
+              <Button
+                key={item.path}
+                variant='text'
+                component={Link}
+                to={item.path}
+                onClick={() => setOpen(false)}
+                sx={{
+                  color: theme.palette.background.default,
+                  fontWeight: 600,
+                  fontSize: '1.1rem',
+                  '&:hover': {
+                    backgroundColor: 'rgba(255,255,255,0.12)',
+                  },
+                }}
+              >
+                {item.label}
+              </Button>
+            ))}
           </Box>
         </Drawer>
       </Box>
@@ -122,15 +162,22 @@ const Header = () => {
         alignItems: 'center',
         position: 'sticky',
         top: 0,
-        backgroundColor: 'background.default',
-        zIndex: 1,
+        backgroundColor: headerColor,
+        color: theme.palette.background.default,
+        zIndex: 1200,
         py: 1,
         px: 2,
         marginBottom: 1,
+        boxShadow: '0 2px 8px rgba(0,0,0,0.18)',
       }}
       role='header'
     >
-      <Logo style={{ height: '5rem', width: 'auto' }} />
+      {/* Logo */}
+      <Link to='/'>
+        <Logo style={{ height: '5rem', width: 'auto' }} title='Home' />
+      </Link>
+
+      {/* Desktop Navigation */}
       <Box
         sx={{
           display: 'flex',
@@ -138,28 +185,44 @@ const Header = () => {
           height: 'max-content',
         }}
       >
-        <Button variant='text' color='secondary' component={Link} to='/'>
-          Home
-        </Button>
-        <Button variant='text' color='secondary' component={Link} to='/about'>
-          About Us
-        </Button>
-        <Button variant='text' color='secondary' component={Link} to='/events'>
-          Events
-        </Button>
-        {/*}
-        <Button variant='text' color='secondary' component={Link} to='/sermons'>
-          Sermons
-        </Button>
-        */}
-        <Button variant='text' color='secondary' component={Link} to='/contact'>
-          Contact Us
-        </Button>
+        {[
+          { label: 'Home', path: '/' },
+          { label: 'About Us', path: '/about' },
+          { label: 'Events', path: '/events' },
+          { label: 'Contact Us', path: '/contact' },
+        ].map(item => (
+          <Button
+            key={item.path}
+            variant='text'
+            component={Link}
+            to={item.path}
+            sx={{
+              color: theme.palette.background.default,
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: 'rgba(255,255,255,0.12)',
+              },
+            }}
+          >
+            {item.label}
+          </Button>
+        ))}
       </Box>
+
+      {/* Desktop CTA */}
       <Button
         variant='contained'
-        color='primary'
-        sx={{ width: 'max-content' }}
+        sx={{
+          width: 'max-content',
+          backgroundColor: theme.palette.background.default,
+          color: theme.palette.text.primary,
+          fontWeight: 700,
+          borderRadius: 999,
+          px: 3,
+          '&:hover': {
+            backgroundColor: '#f5f5f5',
+          },
+        }}
         component={Link}
         to='/contact'
       >

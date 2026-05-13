@@ -12,12 +12,10 @@ const Layout = props => {
   const { children } = props;
 
   return (
-
-    
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      {/* ✅ GLOBAL EVENT BANNER (ALL PAGES) */}
+      {/* GLOBAL EVENT BANNER */}
       <EventBanner />
 
       {/* HEADER */}
@@ -34,8 +32,8 @@ const Layout = props => {
           px: { xs: 1, md: 4 },
           pb: { xs: 1, md: 4 },
 
-          // important: prevent overlap with fixed banner
-          //*pt: 6,
+          // Prevent content from hiding under floating banner
+          pt: { xs: 4, md: 6 },
         }}
       >
         {children}

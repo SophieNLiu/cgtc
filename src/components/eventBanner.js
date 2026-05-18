@@ -12,23 +12,21 @@ import events from '../resources/events.json';
 
 const featuredEvent = events.find(e => e.type === 'featured');
 
-const EVENT_KEY = featuredEvent?.slug || 'event_banner';
-
 const EventBanner = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (!featuredEvent) return;
 
-    const dismissed = localStorage.getItem(EVENT_KEY);
-    setVisible(!dismissed);
+    // Show banner every time user visits/reloads the website
+    setVisible(true);
   }, []);
 
   const handleClose = e => {
     e.preventDefault();
     e.stopPropagation();
 
-    localStorage.setItem(EVENT_KEY, 'true');
+    // Only hide now. Do NOT save to localStorage.
     setVisible(false);
   };
 
@@ -52,7 +50,6 @@ const EventBanner = () => {
         maxWidth: 900,
         zIndex: 99999,
 
-        // Opposite of header/footer
         backgroundColor: theme.palette.background.default,
         color: theme.palette.text.primary,
 

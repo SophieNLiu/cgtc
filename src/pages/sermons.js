@@ -100,37 +100,7 @@ const Sermons = () => {
               • Abo — 见证西罗亚
             </a>
 
-            <a
-              href="https://www.stemi.tv/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              • 唐崇荣 — STEMI TV
-            </a>
 
-            <a
-              href="https://www.svca.cc/messages/latest.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              • 于宏洁 — 硅谷基督徒聚会（SVCA）
-            </a>
-
-            <a
-              href="https://www.lifechurchmissions.com/Sun.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              • 朱志山 — 新加坡基督生命堂
-            </a>
-
-            <a
-              href="https://www.gty.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              • John MacArthur — Grace to You
-            </a>
           </Box>
         </Box>
       </Box>

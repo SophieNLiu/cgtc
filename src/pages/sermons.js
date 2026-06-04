@@ -9,19 +9,20 @@ import Seo from '../components/seo';
 const Sermons = () => {
   return (
     <Layout>
-      <Box
-        sx={{
-          maxWidth: 1000,
-          width: '100%',
-          mx: 'auto',
-          px: 2,
-          py: 4,
-        }}
-      >
+<Box
+  sx={{
+    maxWidth: 1000,
+    width: '100%',
+    mx: 'auto',
+    px: 2,
+    pt: 0,
+    pb: 4,
+  }}
+>
 
         <Box sx={{ mt: 6, maxWidth: 900, mx: 'auto' }}>
           <Typography variant="h4" gutterBottom>
-            讲道链接 Sermon Links
+            恩理讲道链接 Sermon Links
           </Typography>
 
           <Box
@@ -56,6 +57,75 @@ const Sermons = () => {
             </a>
           </Box>
         </Box>
+        {/* External Links */}
+<Box sx={{ mt: 8, maxWidth: 900, mx: 'auto' }}>
+  <Typography variant="h4" gutterBottom>
+    外部链接 External Links
+  </Typography>
+
+  <Box
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 2,
+    }}
+  >
+
+        <a
+      href="https://youtu.be/GEx0rPMt-8k"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      • Abo/见证毕士大
+    </a>
+
+        <a
+      href="https://youtu.be/AXYehFE4nVA"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      • Abo/见证西罗亚
+    </a>
+
+    <a
+      href="https://www.stemi.tv/?utm_so - STEMI TVce=chatgpt.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      • 唐崇荣 - STEMI TV
+    </a>
+
+    
+
+        <a
+      href="https://www.svca.cc/messages/latest.html?utm_source=chatgpt.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      • 于宏洁 - 硅谷基督徒聚会（SVCA）
+    </a>
+
+    <a
+      href="https://www.lifechurchmissions.com/Sun.aspx"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      • 朱志山 - 新加坡基督生命堂
+    </a>
+
+
+
+    <a
+      href="https://www.youtube.com/@DesiringGod"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      • John Piper / Desiring God
+    </a>
+
+
+  </Box>
+</Box>
       </Box>
     </Layout>
   );

@@ -18,43 +18,10 @@ const Sermons = () => {
           py: 4,
         }}
       >
-        <Typography variant="h1" textAlign="center">
-          讲道链接 Sermons
-        </Typography>
 
-        {/* Latest Sermon */}
-        <Box sx={{ mt: 6 }}>
-          <Typography variant="h4" gutterBottom textAlign="center">
-            最新讲道 Latest Sermon
-          </Typography>
-
-          <Box
-            sx={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: 900,
-              mx: 'auto',
-              overflow: 'hidden',
-              borderRadius: 0.25,
-              boxShadow: 3,
-            }}
-          >
-<iframe
-  width="100%"
-  height="500"
-  src="https://www.youtube.com/embed/videoseries?list=PLZlLfWBhBKVZuwr2aODG9-4W52g-fNZjm"
-  title="CGTC Sermons"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-/>
-          </Box>
-        </Box>
-
-        {/* Archive */}
-        <Box sx={{ mt: 8, maxWidth: 900, mx: 'auto' }}>
+        <Box sx={{ mt: 6, maxWidth: 900, mx: 'auto' }}>
           <Typography variant="h4" gutterBottom>
-            讲道存档 Sermon Archive
+            讲道链接 Sermon Links
           </Typography>
 
           <Box

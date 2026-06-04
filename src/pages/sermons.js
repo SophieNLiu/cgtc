@@ -32,13 +32,6 @@ const Sermons = () => {
               gap: 2,
             }}
           >
-            <a
-              href="https://www.youtube.com/playlist?list=PLZlLfWBhBKVZuwr2aODG9-4W52g-fNZjm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              • 最新讲道 Latest Sermon
-            </a>
 
             <a
               href="https://www.youtube.com/playlist?list=PLZlLfWBhBKVZd6LwTsyxcJKVMAwxu_OZf"

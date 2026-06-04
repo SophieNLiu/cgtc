@@ -58,7 +58,7 @@ const AboutUs = () => {
             width: '100%',
             height: { xs: 220, md: 420 },
             objectFit: 'cover',
-            borderRadius: 3,
+            borderRadius: 0.25,
           }}
         />
 
@@ -67,7 +67,7 @@ const AboutUs = () => {
             position: 'absolute',
             inset: 0,
             background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
-            borderRadius: 3,
+            borderRadius: 0.25,
           }}
         />
 
@@ -139,7 +139,7 @@ const AboutUs = () => {
 
                 height: 260,
                 objectFit: 'cover',
-                borderRadius: 2,
+                borderRadius: 0.25,
                 cursor: 'pointer',
                 scrollSnapAlign: 'start',
 

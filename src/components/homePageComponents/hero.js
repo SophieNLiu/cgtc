@@ -113,7 +113,7 @@ We look forward to worshiping with you！
         sx={{
           position: 'relative',
           width: '100%',
-          borderRadius: 3,
+          borderRadius: 0.25,
           overflow: 'hidden',
           cursor: 'pointer',
         }}

@@ -76,7 +76,7 @@ const EventTemplate = ({ pageContext }) => {
                 width: '100%',
                 height: { xs: 260, md: 420 },
                 objectFit: 'cover',
-                borderRadius: 2,
+                borderRadius: 0.25,
                 cursor: 'pointer',
                 display: 'block',
                 mb: 2,
@@ -87,7 +87,7 @@ const EventTemplate = ({ pageContext }) => {
               sx={{
                 '.swiper': {
                   width: '100%',
-                  borderRadius: 2,
+                  borderRadius: 0.25,
                 },
                 '.swiper-button-next, .swiper-button-prev': {
                   color: 'white',
@@ -119,7 +119,7 @@ const EventTemplate = ({ pageContext }) => {
                         width: '100%',
                         height: { xs: 260, md: 420 },
                         objectFit: 'cover',
-                        borderRadius: 2,
+                        borderRadius: 0.25,
                         cursor: 'pointer',
                         display: 'block',
                       }}

@@ -20,8 +20,16 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
 
-  // MATCH FOOTER COLOR EXACTLY
   const headerColor = theme.palette.text.primary;
+  const oppositeColor = theme.palette.background.default;
+
+  const menuItems = [
+    { label: 'Home', path: '/' },
+    { label: 'About Us', path: '/about' },
+    { label: 'Events', path: '/events' },
+    { label: 'Sermons', path: '/sermons' },
+    { label: 'Contact Us', path: '/contact' },
+  ];
 
   if (isMobile) {
     return (
@@ -30,7 +38,7 @@ const Header = () => {
           position: 'sticky',
           top: 0,
           backgroundColor: headerColor,
-          zIndex: 1200,
+          zIndex: 1300,
           p: 1,
           marginBottom: 2,
           boxShadow: '0 2px 8px rgba(0,0,0,0.18)',
@@ -43,23 +51,23 @@ const Header = () => {
             alignItems: 'center',
           }}
         >
-          <Link to='/' style={{ gridColumnStart: 2 }}>
-            <Logo style={{ height: '5rem', width: 'auto' }} title='Home' />
+          <Link to="/" style={{ gridColumnStart: 2 }}>
+            <Logo style={{ height: '5rem', width: 'auto' }} title="Home" />
           </Link>
 
           <IconButton
             sx={{
               justifySelf: 'flex-end',
-              color: theme.palette.background.default,
+              color: oppositeColor,
             }}
             onClick={() => setOpen(true)}
           >
-            <MenuIcon fontSize='large' />
+            <MenuIcon fontSize="large" />
           </IconButton>
         </Box>
 
         <Drawer
-          anchor='right'
+          anchor="right"
           open={open}
           onClose={() => setOpen(false)}
           slotProps={{
@@ -68,7 +76,7 @@ const Header = () => {
                 width: '100vw',
                 height: '100vh',
                 backgroundColor: headerColor,
-                color: theme.palette.background.default,
+                color: oppositeColor,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -89,20 +97,19 @@ const Header = () => {
               top: 0,
               mt: 2,
               mr: 2,
-              color: theme.palette.background.default,
+              color: oppositeColor,
             }}
           >
-            <CloseIcon fontSize='large' />
+            <CloseIcon fontSize="large" />
           </IconButton>
 
-          {/* Main CTA */}
           <Button
             component={Link}
-            to='/contact'
+            to="/contact"
             onClick={() => setOpen(false)}
             sx={{
-              color: theme.palette.text.primary,
-              backgroundColor: theme.palette.background.default,
+              color: headerColor,
+              backgroundColor: oppositeColor,
               px: 3,
               py: 1,
               borderRadius: 999,
@@ -115,7 +122,6 @@ const Header = () => {
             Contact Us
           </Button>
 
-          {/* Navigation */}
           <Box
             sx={{
               display: 'flex',
@@ -124,20 +130,15 @@ const Header = () => {
               gap: 1,
             }}
           >
-            {[
-              { label: 'Home', path: '/' },
-              { label: 'About Us', path: '/about' },
-              { label: 'Events', path: '/events' },
-              { label: 'Contact Us', path: '/contact' },
-            ].map(item => (
+            {menuItems.map(item => (
               <Button
                 key={item.path}
-                variant='text'
+                variant="text"
                 component={Link}
                 to={item.path}
                 onClick={() => setOpen(false)}
                 sx={{
-                  color: theme.palette.background.default,
+                  color: oppositeColor,
                   fontWeight: 600,
                   fontSize: '1.1rem',
                   '&:hover': {
@@ -163,21 +164,19 @@ const Header = () => {
         position: 'sticky',
         top: 0,
         backgroundColor: headerColor,
-        color: theme.palette.background.default,
-        zIndex: 1200,
+        color: oppositeColor,
+        zIndex: 1300,
         py: 1,
         px: 2,
         marginBottom: 1,
         boxShadow: '0 2px 8px rgba(0,0,0,0.18)',
       }}
-      role='header'
+      role="header"
     >
-      {/* Logo */}
-      <Link to='/'>
-        <Logo style={{ height: '5rem', width: 'auto' }} title='Home' />
+      <Link to="/">
+        <Logo style={{ height: '5rem', width: 'auto' }} title="Home" />
       </Link>
 
-      {/* Desktop Navigation */}
       <Box
         sx={{
           display: 'flex',
@@ -185,19 +184,14 @@ const Header = () => {
           height: 'max-content',
         }}
       >
-        {[
-          { label: 'Home', path: '/' },
-          { label: 'About Us', path: '/about' },
-          { label: 'Events', path: '/events' },
-          { label: 'Contact Us', path: '/contact' },
-        ].map(item => (
+        {menuItems.map(item => (
           <Button
             key={item.path}
-            variant='text'
+            variant="text"
             component={Link}
             to={item.path}
             sx={{
-              color: theme.palette.background.default,
+              color: oppositeColor,
               fontWeight: 600,
               '&:hover': {
                 backgroundColor: 'rgba(255,255,255,0.12)',
@@ -209,13 +203,12 @@ const Header = () => {
         ))}
       </Box>
 
-      {/* Desktop CTA */}
       <Button
-        variant='contained'
+        variant="contained"
         sx={{
           width: 'max-content',
-          backgroundColor: theme.palette.background.default,
-          color: theme.palette.text.primary,
+          backgroundColor: oppositeColor,
+          color: headerColor,
           fontWeight: 700,
           borderRadius: 999,
           px: 3,
@@ -224,7 +217,7 @@ const Header = () => {
           },
         }}
         component={Link}
-        to='/contact'
+        to="/contact"
       >
         Contact Us
       </Button>

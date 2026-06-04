@@ -97,7 +97,7 @@ const Events = () => {
             sx={{
               mb: 4,
               p: 2,
-              borderRadius: 2,
+              borderRadius: 0.25,
               '&:hover': {
                 backgroundColor: '#f5f5f5',
               },
@@ -121,7 +121,7 @@ const Events = () => {
                   maxWidth: 400,
                   height: 200,
                   objectFit: 'cover',
-                  borderRadius: 2,
+                  borderRadius: 0.25,
                   mb: 1,
                 }}
               />
@@ -140,3 +140,4 @@ const Events = () => {
 export default Events;
 
 export const Head = () => <Seo title="Events" />;
+

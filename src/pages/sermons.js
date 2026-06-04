@@ -76,7 +76,7 @@ const Sermons = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      • Abo/见证毕士大
+      • Abo - 见证毕士大
     </a>
 
         <a
@@ -84,7 +84,7 @@ const Sermons = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      • Abo/见证西罗亚
+      • Abo - 见证西罗亚
     </a>
 
     <a
@@ -116,11 +116,11 @@ const Sermons = () => {
 
 
     <a
-      href="https://www.youtube.com/@DesiringGod"
+      href="https://www.gty.org/?utm_source=chatgpt.com"
       target="_blank"
       rel="noopener noreferrer"
     >
-      • John Piper / Desiring God
+      • John MacArthor - Grace to You
     </a>
 
 

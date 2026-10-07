@@ -1,4 +1,28 @@
 [
+
+    {
+
+    "slug": "Christmas-2026",
+
+    "title": "圣诞晚会🎉🎉🎉",
+
+    "date": "2026-12-23 6:00 pm - 9:00 pm",
+
+    "location": "恩理教会",
+
+    "description": "瓦器和恩理教会将欢聚一堂，庆祝耶稣基督的诞生",
+
+    "images": [
+
+       "/images/christmas2.jpeg"
+
+    ],
+
+   
+    "type": "future"
+
+  },
+
   {
 
     "slug": "summer-outdoor-service-2026",
@@ -106,7 +130,7 @@
     "location": "Calgary",
     "description": "瓦器，恩理，和青草地教会欢聚一堂，庆祝耶稣基督的诞生",
     "images": [
-      "/images/christmas1.jpeg",
+    
       "/images/christmas2.jpeg",
       "/images/christmas3.jpeg",
       "/images/christmas4.jpeg",
